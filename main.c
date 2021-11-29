@@ -47,11 +47,35 @@
 */
 #include "mcc_generated_files/system.h"
 
+
+
+// #define mcuAtomicOr(variable, mask)            \
+//     __asm__ volatile (                        \
+//         "    ior.w %0, [%1], [%1] \n"        \
+//         : : "r"(mask), "r"(&(variable))        \
+//         : "cc"                                \
+//     )
+// 
+// #define mcuAtomicAnd(variable, mask)        \
+//     __asm__ volatile (                        \
+//         "    and.w %0, [%1], [%1] \n"        \
+//         : : "r"(mask), "r"(&(variable))        \
+//         : "cc"                                \
+//     )
+// 
+// #define mcuAtomicXor(variable, mask)        \
+//     __asm__ volatile (                        \
+//         "    xor.w %0, [%1], [%1] \n"        \
+//         : : "r"(mask), "r"(&(variable))        \
+//         : "cc"                                \
+//     )
 /*
                          Main application
  */
 int main(void)
 {
+//    mcuAtomicAnd(SR, 0xFF1F); // enable interrupts
+// 	INTCON1bits.NSTDIS = 0;   // enable nesting
     // initialize the device
     SYSTEM_Initialize();
     PORTBbits.RB5 = 1;

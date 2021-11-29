@@ -67,20 +67,16 @@ Default Code Model: Small
 Default Data Model: Large
 Default Scalar Model: Small
 
-"program" Memory  [Origin = 0xe04, Length = 0x9dfc]
+"program" Memory  [Origin = 0x2404, Length = 0x8000]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0xe04               0x18c           0x252  (594)
-.text                        0xf90                0xf0           0x168  (360)
-.dinit                      0x1080                0x10            0x18  (24)
-.text                       0x1090                0x12            0x1b  (27)
-.config_IOL1WAY             0xabf8                 0x2             0x3  (3)
-.config_WPEND               0xabfa                 0x2             0x3  (3)
-.config_IESO                0xabfc                 0x2             0x3  (3)
-.config_JTAGEN              0xabfe                 0x2             0x3  (3)
+.text                       0x2404               0x18c           0x252  (594)
+.text                       0x2590                0xf0           0x168  (360)
+.dinit                      0x2680                0x10            0x18  (24)
+.text                       0x2690                0x12            0x1b  (27)
 
-                 Total "program" memory used (bytes):          0x3f9  (1017) 1%
+                 Total "program" memory used (bytes):          0x3ed  (1005) 2%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -107,48 +103,48 @@ Info: Project is using a large data memory model when small data memory model is
 
 External Symbols in Program Memory (by address):
 
-                  0x000e04                  __resetPRI
-                  0x000e40                  __psv_init
-                  0x000e56                  __data_init_da
-                  0x000e56                  __data_init
-                  0x000f08                  __OscillatorFail
-                  0x000f28                  __StackError
-                  0x000f4a                  __AddressError
-                  0x000f6a                  __MathError
-                  0x000f8a                  __DefaultInterrupt
-                  0x000f90                  _main
-                  0x000fec                  _CLOCK_Initialize
-                  0x00103e                  _PIN_MANAGER_Initialize
-                  0x001090                  _SYSTEM_Initialize
-                  0x00109c                  _INTERRUPT_Initialize
+                  0x002404                  __resetPRI
+                  0x002440                  __psv_init
+                  0x002456                  __data_init_da
+                  0x002456                  __data_init
+                  0x002508                  __OscillatorFail
+                  0x002528                  __StackError
+                  0x00254a                  __AddressError
+                  0x00256a                  __MathError
+                  0x00258a                  __DefaultInterrupt
+                  0x002590                  _main
+                  0x0025ec                  _CLOCK_Initialize
+                  0x00263e                  _PIN_MANAGER_Initialize
+                  0x002690                  _SYSTEM_Initialize
+                  0x00269c                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
-                  0x000fec                  _CLOCK_Initialize
-                  0x00109c                  _INTERRUPT_Initialize
-                  0x00103e                  _PIN_MANAGER_Initialize
-                  0x001090                  _SYSTEM_Initialize
-                  0x000f4a                  __AddressError
-                  0x000f8a                  __DefaultInterrupt
-                  0x000f6a                  __MathError
-                  0x000f08                  __OscillatorFail
-                  0x000f28                  __StackError
-                  0x000e56                  __data_init
-                  0x000e56                  __data_init_da
-                  0x000e40                  __psv_init
-                  0x000e04                  __resetPRI
-                  0x000f90                  _main
+                  0x0025ec                  _CLOCK_Initialize
+                  0x00269c                  _INTERRUPT_Initialize
+                  0x00263e                  _PIN_MANAGER_Initialize
+                  0x002690                  _SYSTEM_Initialize
+                  0x00254a                  __AddressError
+                  0x00258a                  __DefaultInterrupt
+                  0x00256a                  __MathError
+                  0x002508                  __OscillatorFail
+                  0x002528                  __StackError
+                  0x002456                  __data_init
+                  0x002456                  __data_init_da
+                  0x002440                  __psv_init
+                  0x002404                  __resetPRI
+                  0x002590                  _main
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
 data             0x000800           0x002000           a !xr
-reset            0x000e00           0x000004  
+reset            0x002400           0x000004  
 ivt              0x000004           0x0000fc  
 _reserved        0x000100           0x000004  
 aivt             0x000104           0x0000fc  
-j_ivt            0x000c00           0x000200  
-program          0x000e04           0x009dfc           xr
+j_ivt            0x002200           0x000200  
+program          0x002404           0x008000           xr
 CONFIG4          0x00abf8           0x000002  
 CONFIG3          0x00abfa           0x000002  
 CONFIG2          0x00abfc           0x000002  
@@ -172,11 +168,11 @@ LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/libfx-elf.a
                     0xabfc                  __CONFIG2 = 0xabfc
                     0xabfe                  __CONFIG1 = 0xabfe
                     0x0001                  __NO_HANDLES = 0x1
-                    0x0e04                  __CODE_BASE = 0xe04
-                    0x9dfc                  __CODE_LENGTH = 0x9dfc
+                    0x2404                  __CODE_BASE = 0x2404
+                    0x8000                  __CODE_LENGTH = 0x8000
                     0x0004                  __IVT_BASE = 0x4
                     0x0104                  __AIVT_BASE = 0x104
-                    0x0c00                  __JIVT_BASE = 0xc00
+                    0x2200                  __JIVT_BASE = 0x2200
                     0x0800                  __DATA_BASE = 0x800
                     0x2000                  __DATA_LENGTH = 0x2000
                     0x0c02                  J_ReservedTrap0 = 0xc02
@@ -306,547 +302,547 @@ LOAD /opt/microchip/xc16/v1.70/bin/bin/../../lib/libfx-elf.a
                     0x0df2                  J_Interrupt116 = 0xdf2
                     0x0df6                  J_Interrupt117 = 0xdf6
 
-.reset            0x000e00          0x4
-                  0x000e00          0x2 SHORT 0xe04 ABSOLUTE (__reset)
-                  0x000e01          0x2 SHORT 0x4
-                  0x000e02          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
-                  0x000e03          0x2 SHORT 0x0
+.reset            0x002400          0x4
+                  0x002400          0x2 SHORT 0x2404 ABSOLUTE (__reset)
+                  0x002401          0x2 SHORT 0x4
+                  0x002402          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
+                  0x002403          0x2 SHORT 0x0
 
-.j_ivt            0x000c00        0x1fa
-                  0x000c00          0x2 SHORT 0x5
-                  0x000c01          0x2 SHORT 0x0
-                  0x000c02          0x2 SHORT 0xf8a DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
-                  0x000c03          0x2 SHORT 0x4
-                  0x000c04          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c05          0x2 SHORT 0x0
-                  0x000c06          0x2 SHORT 0xf08 DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
-                  0x000c07          0x2 SHORT 0x4
-                  0x000c08          0x2 SHORT 0x0 ((DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c09          0x2 SHORT 0x0
-                  0x000c0a          0x2 SHORT 0xf4a DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
-                  0x000c0b          0x2 SHORT 0x4
-                  0x000c0c          0x2 SHORT 0x0 ((DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c0d          0x2 SHORT 0x0
-                  0x000c0e          0x2 SHORT 0xf28 DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
-                  0x000c0f          0x2 SHORT 0x4
-                  0x000c10          0x2 SHORT 0x0 ((DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c11          0x2 SHORT 0x0
-                  0x000c12          0x2 SHORT 0xf6a DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
-                  0x000c13          0x2 SHORT 0x4
-                  0x000c14          0x2 SHORT 0x0 ((DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c15          0x2 SHORT 0x0
-                  0x000c16          0x2 SHORT 0xf8a DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
-                  0x000c17          0x2 SHORT 0x4
-                  0x000c18          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c19          0x2 SHORT 0x0
-                  0x000c1a          0x2 SHORT 0xf8a DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
-                  0x000c1b          0x2 SHORT 0x4
-                  0x000c1c          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c1d          0x2 SHORT 0x0
-                  0x000c1e          0x2 SHORT 0xf8a DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
-                  0x000c1f          0x2 SHORT 0x4
-                  0x000c20          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c21          0x2 SHORT 0x0
-                  0x000c22          0x2 SHORT 0xf8a DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c23          0x2 SHORT 0x4
-                  0x000c24          0x2 SHORT 0x0 ((DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c25          0x2 SHORT 0x0
-                  0x000c26          0x2 SHORT 0xf8a DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c27          0x2 SHORT 0x4
-                  0x000c28          0x2 SHORT 0x0 ((DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c29          0x2 SHORT 0x0
-                  0x000c2a          0x2 SHORT 0xf8a DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c2b          0x2 SHORT 0x4
-                  0x000c2c          0x2 SHORT 0x0 ((DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c2d          0x2 SHORT 0x0
-                  0x000c2e          0x2 SHORT 0xf8a DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c2f          0x2 SHORT 0x4
-                  0x000c30          0x2 SHORT 0x0 ((DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c31          0x2 SHORT 0x0
-                  0x000c32          0x2 SHORT 0xf8a DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
-                  0x000c33          0x2 SHORT 0x4
-                  0x000c34          0x2 SHORT 0x0 ((DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c35          0x2 SHORT 0x0
-                  0x000c36          0x2 SHORT 0xf8a DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c37          0x2 SHORT 0x4
-                  0x000c38          0x2 SHORT 0x0 ((DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c39          0x2 SHORT 0x0
-                  0x000c3a          0x2 SHORT 0xf8a DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c3b          0x2 SHORT 0x4
-                  0x000c3c          0x2 SHORT 0x0 ((DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c3d          0x2 SHORT 0x0
-                  0x000c3e          0x2 SHORT 0xf8a DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c3f          0x2 SHORT 0x4
-                  0x000c40          0x2 SHORT 0x0 ((DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c41          0x2 SHORT 0x0
-                  0x000c42          0x2 SHORT 0xf8a DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c43          0x2 SHORT 0x4
-                  0x000c44          0x2 SHORT 0x0 ((DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c45          0x2 SHORT 0x0
-                  0x000c46          0x2 SHORT 0xf8a DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c47          0x2 SHORT 0x4
-                  0x000c48          0x2 SHORT 0x0 ((DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c49          0x2 SHORT 0x0
-                  0x000c4a          0x2 SHORT 0xf8a DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c4b          0x2 SHORT 0x4
-                  0x000c4c          0x2 SHORT 0x0 ((DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c4d          0x2 SHORT 0x0
-                  0x000c4e          0x2 SHORT 0xf8a DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c4f          0x2 SHORT 0x4
-                  0x000c50          0x2 SHORT 0x0 ((DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c51          0x2 SHORT 0x0
-                  0x000c52          0x2 SHORT 0xf8a DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c53          0x2 SHORT 0x4
-                  0x000c54          0x2 SHORT 0x0 ((DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c55          0x2 SHORT 0x0
-                  0x000c56          0x2 SHORT 0xf8a DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c57          0x2 SHORT 0x4
-                  0x000c58          0x2 SHORT 0x0 ((DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c59          0x2 SHORT 0x0
-                  0x000c5a          0x2 SHORT 0xf8a DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt)
-                  0x000c5b          0x2 SHORT 0x4
-                  0x000c5c          0x2 SHORT 0x0 ((DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c5d          0x2 SHORT 0x0
-                  0x000c5e          0x2 SHORT 0xf8a DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
-                  0x000c5f          0x2 SHORT 0x4
-                  0x000c60          0x2 SHORT 0x0 ((DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c61          0x2 SHORT 0x0
-                  0x000c62          0x2 SHORT 0xf8a DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c63          0x2 SHORT 0x4
-                  0x000c64          0x2 SHORT 0x0 ((DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c65          0x2 SHORT 0x0
-                  0x000c66          0x2 SHORT 0xf8a DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c67          0x2 SHORT 0x4
-                  0x000c68          0x2 SHORT 0x0 ((DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c69          0x2 SHORT 0x0
-                  0x000c6a          0x2 SHORT 0xf8a DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c6b          0x2 SHORT 0x4
-                  0x000c6c          0x2 SHORT 0x0 ((DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c6d          0x2 SHORT 0x0
-                  0x000c6e          0x2 SHORT 0xf8a DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c6f          0x2 SHORT 0x4
-                  0x000c70          0x2 SHORT 0x0 ((DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c71          0x2 SHORT 0x0
-                  0x000c72          0x2 SHORT 0xf8a DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c73          0x2 SHORT 0x4
-                  0x000c74          0x2 SHORT 0x0 ((DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c75          0x2 SHORT 0x0
-                  0x000c76          0x2 SHORT 0xf8a DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
-                  0x000c77          0x2 SHORT 0x4
-                  0x000c78          0x2 SHORT 0x0 ((DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c79          0x2 SHORT 0x0
-                  0x000c7a          0x2 SHORT 0xf8a DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt)
-                  0x000c7b          0x2 SHORT 0x4
-                  0x000c7c          0x2 SHORT 0x0 ((DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c7d          0x2 SHORT 0x0
-                  0x000c7e          0x2 SHORT 0xf8a DEFINED (__Interrupt23)?ABSOLUTE (__Interrupt23):ABSOLUTE (__DefaultInterrupt)
-                  0x000c7f          0x2 SHORT 0x4
-                  0x000c80          0x2 SHORT 0x0 ((DEFINED (__Interrupt23)?ABSOLUTE (__Interrupt23):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c81          0x2 SHORT 0x0
-                  0x000c82          0x2 SHORT 0xf8a DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt)
-                  0x000c83          0x2 SHORT 0x4
-                  0x000c84          0x2 SHORT 0x0 ((DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c85          0x2 SHORT 0x0
-                  0x000c86          0x2 SHORT 0xf8a DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c87          0x2 SHORT 0x4
-                  0x000c88          0x2 SHORT 0x0 ((DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c89          0x2 SHORT 0x0
-                  0x000c8a          0x2 SHORT 0xf8a DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c8b          0x2 SHORT 0x4
-                  0x000c8c          0x2 SHORT 0x0 ((DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c8d          0x2 SHORT 0x0
-                  0x000c8e          0x2 SHORT 0xf8a DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c8f          0x2 SHORT 0x4
-                  0x000c90          0x2 SHORT 0x0 ((DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c91          0x2 SHORT 0x0
-                  0x000c92          0x2 SHORT 0xf8a DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c93          0x2 SHORT 0x4
-                  0x000c94          0x2 SHORT 0x0 ((DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c95          0x2 SHORT 0x0
-                  0x000c96          0x2 SHORT 0xf8a DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c97          0x2 SHORT 0x4
-                  0x000c98          0x2 SHORT 0x0 ((DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c99          0x2 SHORT 0x0
-                  0x000c9a          0x2 SHORT 0xf8a DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c9b          0x2 SHORT 0x4
-                  0x000c9c          0x2 SHORT 0x0 ((DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000c9d          0x2 SHORT 0x0
-                  0x000c9e          0x2 SHORT 0xf8a DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000c9f          0x2 SHORT 0x4
-                  0x000ca0          0x2 SHORT 0x0 ((DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ca1          0x2 SHORT 0x0
-                  0x000ca2          0x2 SHORT 0xf8a DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000ca3          0x2 SHORT 0x4
-                  0x000ca4          0x2 SHORT 0x0 ((DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ca5          0x2 SHORT 0x0
-                  0x000ca6          0x2 SHORT 0xf8a DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000ca7          0x2 SHORT 0x4
-                  0x000ca8          0x2 SHORT 0x0 ((DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ca9          0x2 SHORT 0x0
-                  0x000caa          0x2 SHORT 0xf8a DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
-                  0x000cab          0x2 SHORT 0x4
-                  0x000cac          0x2 SHORT 0x0 ((DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cad          0x2 SHORT 0x0
-                  0x000cae          0x2 SHORT 0xf8a DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
-                  0x000caf          0x2 SHORT 0x4
-                  0x000cb0          0x2 SHORT 0x0 ((DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cb1          0x2 SHORT 0x0
-                  0x000cb2          0x2 SHORT 0xf8a DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt)
-                  0x000cb3          0x2 SHORT 0x4
-                  0x000cb4          0x2 SHORT 0x0 ((DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cb5          0x2 SHORT 0x0
-                  0x000cb6          0x2 SHORT 0xf8a DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cb7          0x2 SHORT 0x4
-                  0x000cb8          0x2 SHORT 0x0 ((DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cb9          0x2 SHORT 0x0
-                  0x000cba          0x2 SHORT 0xf8a DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cbb          0x2 SHORT 0x4
-                  0x000cbc          0x2 SHORT 0x0 ((DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cbd          0x2 SHORT 0x0
-                  0x000cbe          0x2 SHORT 0xf8a DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cbf          0x2 SHORT 0x4
-                  0x000cc0          0x2 SHORT 0x0 ((DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cc1          0x2 SHORT 0x0
-                  0x000cc2          0x2 SHORT 0xf8a DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt)
-                  0x000cc3          0x2 SHORT 0x4
-                  0x000cc4          0x2 SHORT 0x0 ((DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cc5          0x2 SHORT 0x0
-                  0x000cc6          0x2 SHORT 0xf8a DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cc7          0x2 SHORT 0x4
-                  0x000cc8          0x2 SHORT 0x0 ((DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cc9          0x2 SHORT 0x0
-                  0x000cca          0x2 SHORT 0xf8a DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt)
-                  0x000ccb          0x2 SHORT 0x4
-                  0x000ccc          0x2 SHORT 0x0 ((DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ccd          0x2 SHORT 0x0
-                  0x000cce          0x2 SHORT 0xf8a DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt)
-                  0x000ccf          0x2 SHORT 0x4
-                  0x000cd0          0x2 SHORT 0x0 ((DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cd1          0x2 SHORT 0x0
-                  0x000cd2          0x2 SHORT 0xf8a DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt)
-                  0x000cd3          0x2 SHORT 0x4
-                  0x000cd4          0x2 SHORT 0x0 ((DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cd5          0x2 SHORT 0x0
-                  0x000cd6          0x2 SHORT 0xf8a DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cd7          0x2 SHORT 0x4
-                  0x000cd8          0x2 SHORT 0x0 ((DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cd9          0x2 SHORT 0x0
-                  0x000cda          0x2 SHORT 0xf8a DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
-                  0x000cdb          0x2 SHORT 0x4
-                  0x000cdc          0x2 SHORT 0x0 ((DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cdd          0x2 SHORT 0x0
-                  0x000cde          0x2 SHORT 0xf8a DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
-                  0x000cdf          0x2 SHORT 0x4
-                  0x000ce0          0x2 SHORT 0x0 ((DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ce1          0x2 SHORT 0x0
-                  0x000ce2          0x2 SHORT 0xf8a DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
-                  0x000ce3          0x2 SHORT 0x4
-                  0x000ce4          0x2 SHORT 0x0 ((DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ce5          0x2 SHORT 0x0
-                  0x000ce6          0x2 SHORT 0xf8a DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000ce7          0x2 SHORT 0x4
-                  0x000ce8          0x2 SHORT 0x0 ((DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ce9          0x2 SHORT 0x0
-                  0x000cea          0x2 SHORT 0xf8a DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000ceb          0x2 SHORT 0x4
-                  0x000cec          0x2 SHORT 0x0 ((DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ced          0x2 SHORT 0x0
-                  0x000cee          0x2 SHORT 0xf8a DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
-                  0x000cef          0x2 SHORT 0x4
-                  0x000cf0          0x2 SHORT 0x0 ((DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cf1          0x2 SHORT 0x0
-                  0x000cf2          0x2 SHORT 0xf8a DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
-                  0x000cf3          0x2 SHORT 0x4
-                  0x000cf4          0x2 SHORT 0x0 ((DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cf5          0x2 SHORT 0x0
-                  0x000cf6          0x2 SHORT 0xf8a DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cf7          0x2 SHORT 0x4
-                  0x000cf8          0x2 SHORT 0x0 ((DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cf9          0x2 SHORT 0x0
-                  0x000cfa          0x2 SHORT 0xf8a DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000cfb          0x2 SHORT 0x4
-                  0x000cfc          0x2 SHORT 0x0 ((DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000cfd          0x2 SHORT 0x0
-                  0x000cfe          0x2 SHORT 0xf8a DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt)
-                  0x000cff          0x2 SHORT 0x4
-                  0x000d00          0x2 SHORT 0x0 ((DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d01          0x2 SHORT 0x0
-                  0x000d02          0x2 SHORT 0xf8a DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt)
-                  0x000d03          0x2 SHORT 0x4
-                  0x000d04          0x2 SHORT 0x0 ((DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d05          0x2 SHORT 0x0
-                  0x000d06          0x2 SHORT 0xf8a DEFINED (__Interrupt57)?ABSOLUTE (__Interrupt57):ABSOLUTE (__DefaultInterrupt)
-                  0x000d07          0x2 SHORT 0x4
-                  0x000d08          0x2 SHORT 0x0 ((DEFINED (__Interrupt57)?ABSOLUTE (__Interrupt57):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d09          0x2 SHORT 0x0
-                  0x000d0a          0x2 SHORT 0xf8a DEFINED (__Interrupt58)?ABSOLUTE (__Interrupt58):ABSOLUTE (__DefaultInterrupt)
-                  0x000d0b          0x2 SHORT 0x4
-                  0x000d0c          0x2 SHORT 0x0 ((DEFINED (__Interrupt58)?ABSOLUTE (__Interrupt58):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d0d          0x2 SHORT 0x0
-                  0x000d0e          0x2 SHORT 0xf8a DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt)
-                  0x000d0f          0x2 SHORT 0x4
-                  0x000d10          0x2 SHORT 0x0 ((DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d11          0x2 SHORT 0x0
-                  0x000d12          0x2 SHORT 0xf8a DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt)
-                  0x000d13          0x2 SHORT 0x4
-                  0x000d14          0x2 SHORT 0x0 ((DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d15          0x2 SHORT 0x0
-                  0x000d16          0x2 SHORT 0xf8a DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt)
-                  0x000d17          0x2 SHORT 0x4
-                  0x000d18          0x2 SHORT 0x0 ((DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d19          0x2 SHORT 0x0
-                  0x000d1a          0x2 SHORT 0xf8a DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000d1b          0x2 SHORT 0x4
-                  0x000d1c          0x2 SHORT 0x0 ((DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d1d          0x2 SHORT 0x0
-                  0x000d1e          0x2 SHORT 0xf8a DEFINED (__Interrupt63)?ABSOLUTE (__Interrupt63):ABSOLUTE (__DefaultInterrupt)
-                  0x000d1f          0x2 SHORT 0x4
-                  0x000d20          0x2 SHORT 0x0 ((DEFINED (__Interrupt63)?ABSOLUTE (__Interrupt63):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d21          0x2 SHORT 0x0
-                  0x000d22          0x2 SHORT 0xf8a DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt)
-                  0x000d23          0x2 SHORT 0x4
-                  0x000d24          0x2 SHORT 0x0 ((DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d25          0x2 SHORT 0x0
-                  0x000d26          0x2 SHORT 0xf8a DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000d27          0x2 SHORT 0x4
-                  0x000d28          0x2 SHORT 0x0 ((DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d29          0x2 SHORT 0x0
-                  0x000d2a          0x2 SHORT 0xf8a DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000d2b          0x2 SHORT 0x4
-                  0x000d2c          0x2 SHORT 0x0 ((DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d2d          0x2 SHORT 0x0
-                  0x000d2e          0x2 SHORT 0xf8a DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000d2f          0x2 SHORT 0x4
-                  0x000d30          0x2 SHORT 0x0 ((DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d31          0x2 SHORT 0x0
-                  0x000d32          0x2 SHORT 0xf8a DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt)
-                  0x000d33          0x2 SHORT 0x4
-                  0x000d34          0x2 SHORT 0x0 ((DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d35          0x2 SHORT 0x0
-                  0x000d36          0x2 SHORT 0xf8a DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt)
-                  0x000d37          0x2 SHORT 0x4
-                  0x000d38          0x2 SHORT 0x0 ((DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d39          0x2 SHORT 0x0
-                  0x000d3a          0x2 SHORT 0xf8a DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
-                  0x000d3b          0x2 SHORT 0x4
-                  0x000d3c          0x2 SHORT 0x0 ((DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d3d          0x2 SHORT 0x0
-                  0x000d3e          0x2 SHORT 0xf8a DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
-                  0x000d3f          0x2 SHORT 0x4
-                  0x000d40          0x2 SHORT 0x0 ((DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d41          0x2 SHORT 0x0
-                  0x000d42          0x2 SHORT 0xf8a DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
-                  0x000d43          0x2 SHORT 0x4
-                  0x000d44          0x2 SHORT 0x0 ((DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d45          0x2 SHORT 0x0
-                  0x000d46          0x2 SHORT 0xf8a DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt)
-                  0x000d47          0x2 SHORT 0x4
-                  0x000d48          0x2 SHORT 0x0 ((DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d49          0x2 SHORT 0x0
-                  0x000d4a          0x2 SHORT 0xf8a DEFINED (__Interrupt74)?ABSOLUTE (__Interrupt74):ABSOLUTE (__DefaultInterrupt)
-                  0x000d4b          0x2 SHORT 0x4
-                  0x000d4c          0x2 SHORT 0x0 ((DEFINED (__Interrupt74)?ABSOLUTE (__Interrupt74):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d4d          0x2 SHORT 0x0
-                  0x000d4e          0x2 SHORT 0xf8a DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt)
-                  0x000d4f          0x2 SHORT 0x4
-                  0x000d50          0x2 SHORT 0x0 ((DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d51          0x2 SHORT 0x0
-                  0x000d52          0x2 SHORT 0xf8a DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt)
-                  0x000d53          0x2 SHORT 0x4
-                  0x000d54          0x2 SHORT 0x0 ((DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d55          0x2 SHORT 0x0
-                  0x000d56          0x2 SHORT 0xf8a DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt)
-                  0x000d57          0x2 SHORT 0x4
-                  0x000d58          0x2 SHORT 0x0 ((DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d59          0x2 SHORT 0x0
-                  0x000d5a          0x2 SHORT 0xf8a DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt)
-                  0x000d5b          0x2 SHORT 0x4
-                  0x000d5c          0x2 SHORT 0x0 ((DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d5d          0x2 SHORT 0x0
-                  0x000d5e          0x2 SHORT 0xf8a DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt)
-                  0x000d5f          0x2 SHORT 0x4
-                  0x000d60          0x2 SHORT 0x0 ((DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d61          0x2 SHORT 0x0
-                  0x000d62          0x2 SHORT 0xf8a DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt)
-                  0x000d63          0x2 SHORT 0x4
-                  0x000d64          0x2 SHORT 0x0 ((DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d65          0x2 SHORT 0x0
-                  0x000d66          0x2 SHORT 0xf8a DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt)
-                  0x000d67          0x2 SHORT 0x4
-                  0x000d68          0x2 SHORT 0x0 ((DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d69          0x2 SHORT 0x0
-                  0x000d6a          0x2 SHORT 0xf8a DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt)
-                  0x000d6b          0x2 SHORT 0x4
-                  0x000d6c          0x2 SHORT 0x0 ((DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d6d          0x2 SHORT 0x0
-                  0x000d6e          0x2 SHORT 0xf8a DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt)
-                  0x000d6f          0x2 SHORT 0x4
-                  0x000d70          0x2 SHORT 0x0 ((DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d71          0x2 SHORT 0x0
-                  0x000d72          0x2 SHORT 0xf8a DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt)
-                  0x000d73          0x2 SHORT 0x4
-                  0x000d74          0x2 SHORT 0x0 ((DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d75          0x2 SHORT 0x0
-                  0x000d76          0x2 SHORT 0xf8a DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt)
-                  0x000d77          0x2 SHORT 0x4
-                  0x000d78          0x2 SHORT 0x0 ((DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d79          0x2 SHORT 0x0
-                  0x000d7a          0x2 SHORT 0xf8a DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt)
-                  0x000d7b          0x2 SHORT 0x4
-                  0x000d7c          0x2 SHORT 0x0 ((DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d7d          0x2 SHORT 0x0
-                  0x000d7e          0x2 SHORT 0xf8a DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt)
-                  0x000d7f          0x2 SHORT 0x4
-                  0x000d80          0x2 SHORT 0x0 ((DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d81          0x2 SHORT 0x0
-                  0x000d82          0x2 SHORT 0xf8a DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt)
-                  0x000d83          0x2 SHORT 0x4
-                  0x000d84          0x2 SHORT 0x0 ((DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d85          0x2 SHORT 0x0
-                  0x000d86          0x2 SHORT 0xf8a DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt)
-                  0x000d87          0x2 SHORT 0x4
-                  0x000d88          0x2 SHORT 0x0 ((DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d89          0x2 SHORT 0x0
-                  0x000d8a          0x2 SHORT 0xf8a DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt)
-                  0x000d8b          0x2 SHORT 0x4
-                  0x000d8c          0x2 SHORT 0x0 ((DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d8d          0x2 SHORT 0x0
-                  0x000d8e          0x2 SHORT 0xf8a DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt)
-                  0x000d8f          0x2 SHORT 0x4
-                  0x000d90          0x2 SHORT 0x0 ((DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d91          0x2 SHORT 0x0
-                  0x000d92          0x2 SHORT 0xf8a DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt)
-                  0x000d93          0x2 SHORT 0x4
-                  0x000d94          0x2 SHORT 0x0 ((DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d95          0x2 SHORT 0x0
-                  0x000d96          0x2 SHORT 0xf8a DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt)
-                  0x000d97          0x2 SHORT 0x4
-                  0x000d98          0x2 SHORT 0x0 ((DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d99          0x2 SHORT 0x0
-                  0x000d9a          0x2 SHORT 0xf8a DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt)
-                  0x000d9b          0x2 SHORT 0x4
-                  0x000d9c          0x2 SHORT 0x0 ((DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000d9d          0x2 SHORT 0x0
-                  0x000d9e          0x2 SHORT 0xf8a DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt)
-                  0x000d9f          0x2 SHORT 0x4
-                  0x000da0          0x2 SHORT 0x0 ((DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000da1          0x2 SHORT 0x0
-                  0x000da2          0x2 SHORT 0xf8a DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt)
-                  0x000da3          0x2 SHORT 0x4
-                  0x000da4          0x2 SHORT 0x0 ((DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000da5          0x2 SHORT 0x0
-                  0x000da6          0x2 SHORT 0xf8a DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt)
-                  0x000da7          0x2 SHORT 0x4
-                  0x000da8          0x2 SHORT 0x0 ((DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000da9          0x2 SHORT 0x0
-                  0x000daa          0x2 SHORT 0xf8a DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt)
-                  0x000dab          0x2 SHORT 0x4
-                  0x000dac          0x2 SHORT 0x0 ((DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dad          0x2 SHORT 0x0
-                  0x000dae          0x2 SHORT 0xf8a DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt)
-                  0x000daf          0x2 SHORT 0x4
-                  0x000db0          0x2 SHORT 0x0 ((DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000db1          0x2 SHORT 0x0
-                  0x000db2          0x2 SHORT 0xf8a DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt)
-                  0x000db3          0x2 SHORT 0x4
-                  0x000db4          0x2 SHORT 0x0 ((DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000db5          0x2 SHORT 0x0
-                  0x000db6          0x2 SHORT 0xf8a DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt)
-                  0x000db7          0x2 SHORT 0x4
-                  0x000db8          0x2 SHORT 0x0 ((DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000db9          0x2 SHORT 0x0
-                  0x000dba          0x2 SHORT 0xf8a DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt)
-                  0x000dbb          0x2 SHORT 0x4
-                  0x000dbc          0x2 SHORT 0x0 ((DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dbd          0x2 SHORT 0x0
-                  0x000dbe          0x2 SHORT 0xf8a DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt)
-                  0x000dbf          0x2 SHORT 0x4
-                  0x000dc0          0x2 SHORT 0x0 ((DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dc1          0x2 SHORT 0x0
-                  0x000dc2          0x2 SHORT 0xf8a DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt)
-                  0x000dc3          0x2 SHORT 0x4
-                  0x000dc4          0x2 SHORT 0x0 ((DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dc5          0x2 SHORT 0x0
-                  0x000dc6          0x2 SHORT 0xf8a DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt)
-                  0x000dc7          0x2 SHORT 0x4
-                  0x000dc8          0x2 SHORT 0x0 ((DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dc9          0x2 SHORT 0x0
-                  0x000dca          0x2 SHORT 0xf8a DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt)
-                  0x000dcb          0x2 SHORT 0x4
-                  0x000dcc          0x2 SHORT 0x0 ((DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dcd          0x2 SHORT 0x0
-                  0x000dce          0x2 SHORT 0xf8a DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
-                  0x000dcf          0x2 SHORT 0x4
-                  0x000dd0          0x2 SHORT 0x0 ((DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dd1          0x2 SHORT 0x0
-                  0x000dd2          0x2 SHORT 0xf8a DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
-                  0x000dd3          0x2 SHORT 0x4
-                  0x000dd4          0x2 SHORT 0x0 ((DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dd5          0x2 SHORT 0x0
-                  0x000dd6          0x2 SHORT 0xf8a DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
-                  0x000dd7          0x2 SHORT 0x4
-                  0x000dd8          0x2 SHORT 0x0 ((DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000dd9          0x2 SHORT 0x0
-                  0x000dda          0x2 SHORT 0xf8a DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt)
-                  0x000ddb          0x2 SHORT 0x4
-                  0x000ddc          0x2 SHORT 0x0 ((DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ddd          0x2 SHORT 0x0
-                  0x000dde          0x2 SHORT 0xf8a DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt)
-                  0x000ddf          0x2 SHORT 0x4
-                  0x000de0          0x2 SHORT 0x0 ((DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000de1          0x2 SHORT 0x0
-                  0x000de2          0x2 SHORT 0xf8a DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt)
-                  0x000de3          0x2 SHORT 0x4
-                  0x000de4          0x2 SHORT 0x0 ((DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000de5          0x2 SHORT 0x0
-                  0x000de6          0x2 SHORT 0xf8a DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt)
-                  0x000de7          0x2 SHORT 0x4
-                  0x000de8          0x2 SHORT 0x0 ((DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000de9          0x2 SHORT 0x0
-                  0x000dea          0x2 SHORT 0xf8a DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt)
-                  0x000deb          0x2 SHORT 0x4
-                  0x000dec          0x2 SHORT 0x0 ((DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000ded          0x2 SHORT 0x0
-                  0x000dee          0x2 SHORT 0xf8a DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt)
-                  0x000def          0x2 SHORT 0x4
-                  0x000df0          0x2 SHORT 0x0 ((DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000df1          0x2 SHORT 0x0
-                  0x000df2          0x2 SHORT 0xf8a DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt)
-                  0x000df3          0x2 SHORT 0x4
-                  0x000df4          0x2 SHORT 0x0 ((DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000df5          0x2 SHORT 0x0
-                  0x000df6          0x2 SHORT 0xf8a DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt)
-                  0x000df7          0x2 SHORT 0x4
-                  0x000df8          0x2 SHORT 0x0 ((DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
-                  0x000df9          0x2 SHORT 0x0
+.j_ivt            0x002200        0x1fa
+                  0x002200          0x2 SHORT 0x5
+                  0x002201          0x2 SHORT 0x0
+                  0x002202          0x2 SHORT 0x258a DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x002203          0x2 SHORT 0x4
+                  0x002204          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002205          0x2 SHORT 0x0
+                  0x002206          0x2 SHORT 0x2508 DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x002207          0x2 SHORT 0x4
+                  0x002208          0x2 SHORT 0x0 ((DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002209          0x2 SHORT 0x0
+                  0x00220a          0x2 SHORT 0x254a DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00220b          0x2 SHORT 0x4
+                  0x00220c          0x2 SHORT 0x0 ((DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00220d          0x2 SHORT 0x0
+                  0x00220e          0x2 SHORT 0x2528 DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00220f          0x2 SHORT 0x4
+                  0x002210          0x2 SHORT 0x0 ((DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002211          0x2 SHORT 0x0
+                  0x002212          0x2 SHORT 0x256a DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x002213          0x2 SHORT 0x4
+                  0x002214          0x2 SHORT 0x0 ((DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002215          0x2 SHORT 0x0
+                  0x002216          0x2 SHORT 0x258a DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x002217          0x2 SHORT 0x4
+                  0x002218          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002219          0x2 SHORT 0x0
+                  0x00221a          0x2 SHORT 0x258a DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x00221b          0x2 SHORT 0x4
+                  0x00221c          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00221d          0x2 SHORT 0x0
+                  0x00221e          0x2 SHORT 0x258a DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x00221f          0x2 SHORT 0x4
+                  0x002220          0x2 SHORT 0x0 ((DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002221          0x2 SHORT 0x0
+                  0x002222          0x2 SHORT 0x258a DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002223          0x2 SHORT 0x4
+                  0x002224          0x2 SHORT 0x0 ((DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002225          0x2 SHORT 0x0
+                  0x002226          0x2 SHORT 0x258a DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002227          0x2 SHORT 0x4
+                  0x002228          0x2 SHORT 0x0 ((DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002229          0x2 SHORT 0x0
+                  0x00222a          0x2 SHORT 0x258a DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00222b          0x2 SHORT 0x4
+                  0x00222c          0x2 SHORT 0x0 ((DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00222d          0x2 SHORT 0x0
+                  0x00222e          0x2 SHORT 0x258a DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00222f          0x2 SHORT 0x4
+                  0x002230          0x2 SHORT 0x0 ((DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002231          0x2 SHORT 0x0
+                  0x002232          0x2 SHORT 0x258a DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
+                  0x002233          0x2 SHORT 0x4
+                  0x002234          0x2 SHORT 0x0 ((DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002235          0x2 SHORT 0x0
+                  0x002236          0x2 SHORT 0x258a DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002237          0x2 SHORT 0x4
+                  0x002238          0x2 SHORT 0x0 ((DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002239          0x2 SHORT 0x0
+                  0x00223a          0x2 SHORT 0x258a DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00223b          0x2 SHORT 0x4
+                  0x00223c          0x2 SHORT 0x0 ((DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00223d          0x2 SHORT 0x0
+                  0x00223e          0x2 SHORT 0x258a DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00223f          0x2 SHORT 0x4
+                  0x002240          0x2 SHORT 0x0 ((DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002241          0x2 SHORT 0x0
+                  0x002242          0x2 SHORT 0x258a DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002243          0x2 SHORT 0x4
+                  0x002244          0x2 SHORT 0x0 ((DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002245          0x2 SHORT 0x0
+                  0x002246          0x2 SHORT 0x258a DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002247          0x2 SHORT 0x4
+                  0x002248          0x2 SHORT 0x0 ((DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002249          0x2 SHORT 0x0
+                  0x00224a          0x2 SHORT 0x258a DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00224b          0x2 SHORT 0x4
+                  0x00224c          0x2 SHORT 0x0 ((DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00224d          0x2 SHORT 0x0
+                  0x00224e          0x2 SHORT 0x258a DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00224f          0x2 SHORT 0x4
+                  0x002250          0x2 SHORT 0x0 ((DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002251          0x2 SHORT 0x0
+                  0x002252          0x2 SHORT 0x258a DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002253          0x2 SHORT 0x4
+                  0x002254          0x2 SHORT 0x0 ((DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002255          0x2 SHORT 0x0
+                  0x002256          0x2 SHORT 0x258a DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002257          0x2 SHORT 0x4
+                  0x002258          0x2 SHORT 0x0 ((DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002259          0x2 SHORT 0x0
+                  0x00225a          0x2 SHORT 0x258a DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt)
+                  0x00225b          0x2 SHORT 0x4
+                  0x00225c          0x2 SHORT 0x0 ((DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00225d          0x2 SHORT 0x0
+                  0x00225e          0x2 SHORT 0x258a DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
+                  0x00225f          0x2 SHORT 0x4
+                  0x002260          0x2 SHORT 0x0 ((DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002261          0x2 SHORT 0x0
+                  0x002262          0x2 SHORT 0x258a DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002263          0x2 SHORT 0x4
+                  0x002264          0x2 SHORT 0x0 ((DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002265          0x2 SHORT 0x0
+                  0x002266          0x2 SHORT 0x258a DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002267          0x2 SHORT 0x4
+                  0x002268          0x2 SHORT 0x0 ((DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002269          0x2 SHORT 0x0
+                  0x00226a          0x2 SHORT 0x258a DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00226b          0x2 SHORT 0x4
+                  0x00226c          0x2 SHORT 0x0 ((DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00226d          0x2 SHORT 0x0
+                  0x00226e          0x2 SHORT 0x258a DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00226f          0x2 SHORT 0x4
+                  0x002270          0x2 SHORT 0x0 ((DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002271          0x2 SHORT 0x0
+                  0x002272          0x2 SHORT 0x258a DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002273          0x2 SHORT 0x4
+                  0x002274          0x2 SHORT 0x0 ((DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002275          0x2 SHORT 0x0
+                  0x002276          0x2 SHORT 0x258a DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
+                  0x002277          0x2 SHORT 0x4
+                  0x002278          0x2 SHORT 0x0 ((DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002279          0x2 SHORT 0x0
+                  0x00227a          0x2 SHORT 0x258a DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt)
+                  0x00227b          0x2 SHORT 0x4
+                  0x00227c          0x2 SHORT 0x0 ((DEFINED (__Interrupt22)?ABSOLUTE (__Interrupt22):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00227d          0x2 SHORT 0x0
+                  0x00227e          0x2 SHORT 0x258a DEFINED (__Interrupt23)?ABSOLUTE (__Interrupt23):ABSOLUTE (__DefaultInterrupt)
+                  0x00227f          0x2 SHORT 0x4
+                  0x002280          0x2 SHORT 0x0 ((DEFINED (__Interrupt23)?ABSOLUTE (__Interrupt23):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002281          0x2 SHORT 0x0
+                  0x002282          0x2 SHORT 0x258a DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt)
+                  0x002283          0x2 SHORT 0x4
+                  0x002284          0x2 SHORT 0x0 ((DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002285          0x2 SHORT 0x0
+                  0x002286          0x2 SHORT 0x258a DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002287          0x2 SHORT 0x4
+                  0x002288          0x2 SHORT 0x0 ((DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002289          0x2 SHORT 0x0
+                  0x00228a          0x2 SHORT 0x258a DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00228b          0x2 SHORT 0x4
+                  0x00228c          0x2 SHORT 0x0 ((DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00228d          0x2 SHORT 0x0
+                  0x00228e          0x2 SHORT 0x258a DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00228f          0x2 SHORT 0x4
+                  0x002290          0x2 SHORT 0x0 ((DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002291          0x2 SHORT 0x0
+                  0x002292          0x2 SHORT 0x258a DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002293          0x2 SHORT 0x4
+                  0x002294          0x2 SHORT 0x0 ((DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002295          0x2 SHORT 0x0
+                  0x002296          0x2 SHORT 0x258a DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002297          0x2 SHORT 0x4
+                  0x002298          0x2 SHORT 0x0 ((DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002299          0x2 SHORT 0x0
+                  0x00229a          0x2 SHORT 0x258a DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00229b          0x2 SHORT 0x4
+                  0x00229c          0x2 SHORT 0x0 ((DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00229d          0x2 SHORT 0x0
+                  0x00229e          0x2 SHORT 0x258a DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00229f          0x2 SHORT 0x4
+                  0x0022a0          0x2 SHORT 0x0 ((DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022a1          0x2 SHORT 0x0
+                  0x0022a2          0x2 SHORT 0x258a DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022a3          0x2 SHORT 0x4
+                  0x0022a4          0x2 SHORT 0x0 ((DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022a5          0x2 SHORT 0x0
+                  0x0022a6          0x2 SHORT 0x258a DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022a7          0x2 SHORT 0x4
+                  0x0022a8          0x2 SHORT 0x0 ((DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022a9          0x2 SHORT 0x0
+                  0x0022aa          0x2 SHORT 0x258a DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
+                  0x0022ab          0x2 SHORT 0x4
+                  0x0022ac          0x2 SHORT 0x0 ((DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022ad          0x2 SHORT 0x0
+                  0x0022ae          0x2 SHORT 0x258a DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
+                  0x0022af          0x2 SHORT 0x4
+                  0x0022b0          0x2 SHORT 0x0 ((DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022b1          0x2 SHORT 0x0
+                  0x0022b2          0x2 SHORT 0x258a DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt)
+                  0x0022b3          0x2 SHORT 0x4
+                  0x0022b4          0x2 SHORT 0x0 ((DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022b5          0x2 SHORT 0x0
+                  0x0022b6          0x2 SHORT 0x258a DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022b7          0x2 SHORT 0x4
+                  0x0022b8          0x2 SHORT 0x0 ((DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022b9          0x2 SHORT 0x0
+                  0x0022ba          0x2 SHORT 0x258a DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022bb          0x2 SHORT 0x4
+                  0x0022bc          0x2 SHORT 0x0 ((DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022bd          0x2 SHORT 0x0
+                  0x0022be          0x2 SHORT 0x258a DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022bf          0x2 SHORT 0x4
+                  0x0022c0          0x2 SHORT 0x0 ((DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022c1          0x2 SHORT 0x0
+                  0x0022c2          0x2 SHORT 0x258a DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt)
+                  0x0022c3          0x2 SHORT 0x4
+                  0x0022c4          0x2 SHORT 0x0 ((DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022c5          0x2 SHORT 0x0
+                  0x0022c6          0x2 SHORT 0x258a DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022c7          0x2 SHORT 0x4
+                  0x0022c8          0x2 SHORT 0x0 ((DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022c9          0x2 SHORT 0x0
+                  0x0022ca          0x2 SHORT 0x258a DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt)
+                  0x0022cb          0x2 SHORT 0x4
+                  0x0022cc          0x2 SHORT 0x0 ((DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022cd          0x2 SHORT 0x0
+                  0x0022ce          0x2 SHORT 0x258a DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt)
+                  0x0022cf          0x2 SHORT 0x4
+                  0x0022d0          0x2 SHORT 0x0 ((DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022d1          0x2 SHORT 0x0
+                  0x0022d2          0x2 SHORT 0x258a DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt)
+                  0x0022d3          0x2 SHORT 0x4
+                  0x0022d4          0x2 SHORT 0x0 ((DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022d5          0x2 SHORT 0x0
+                  0x0022d6          0x2 SHORT 0x258a DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022d7          0x2 SHORT 0x4
+                  0x0022d8          0x2 SHORT 0x0 ((DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022d9          0x2 SHORT 0x0
+                  0x0022da          0x2 SHORT 0x258a DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x0022db          0x2 SHORT 0x4
+                  0x0022dc          0x2 SHORT 0x0 ((DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022dd          0x2 SHORT 0x0
+                  0x0022de          0x2 SHORT 0x258a DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x0022df          0x2 SHORT 0x4
+                  0x0022e0          0x2 SHORT 0x0 ((DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022e1          0x2 SHORT 0x0
+                  0x0022e2          0x2 SHORT 0x258a DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x0022e3          0x2 SHORT 0x4
+                  0x0022e4          0x2 SHORT 0x0 ((DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022e5          0x2 SHORT 0x0
+                  0x0022e6          0x2 SHORT 0x258a DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022e7          0x2 SHORT 0x4
+                  0x0022e8          0x2 SHORT 0x0 ((DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022e9          0x2 SHORT 0x0
+                  0x0022ea          0x2 SHORT 0x258a DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022eb          0x2 SHORT 0x4
+                  0x0022ec          0x2 SHORT 0x0 ((DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022ed          0x2 SHORT 0x0
+                  0x0022ee          0x2 SHORT 0x258a DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x0022ef          0x2 SHORT 0x4
+                  0x0022f0          0x2 SHORT 0x0 ((DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022f1          0x2 SHORT 0x0
+                  0x0022f2          0x2 SHORT 0x258a DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x0022f3          0x2 SHORT 0x4
+                  0x0022f4          0x2 SHORT 0x0 ((DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022f5          0x2 SHORT 0x0
+                  0x0022f6          0x2 SHORT 0x258a DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022f7          0x2 SHORT 0x4
+                  0x0022f8          0x2 SHORT 0x0 ((DEFINED (__INT3Interrupt)?ABSOLUTE (__INT3Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022f9          0x2 SHORT 0x0
+                  0x0022fa          0x2 SHORT 0x258a DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0022fb          0x2 SHORT 0x4
+                  0x0022fc          0x2 SHORT 0x0 ((DEFINED (__INT4Interrupt)?ABSOLUTE (__INT4Interrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0022fd          0x2 SHORT 0x0
+                  0x0022fe          0x2 SHORT 0x258a DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt)
+                  0x0022ff          0x2 SHORT 0x4
+                  0x002300          0x2 SHORT 0x0 ((DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002301          0x2 SHORT 0x0
+                  0x002302          0x2 SHORT 0x258a DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt)
+                  0x002303          0x2 SHORT 0x4
+                  0x002304          0x2 SHORT 0x0 ((DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002305          0x2 SHORT 0x0
+                  0x002306          0x2 SHORT 0x258a DEFINED (__Interrupt57)?ABSOLUTE (__Interrupt57):ABSOLUTE (__DefaultInterrupt)
+                  0x002307          0x2 SHORT 0x4
+                  0x002308          0x2 SHORT 0x0 ((DEFINED (__Interrupt57)?ABSOLUTE (__Interrupt57):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002309          0x2 SHORT 0x0
+                  0x00230a          0x2 SHORT 0x258a DEFINED (__Interrupt58)?ABSOLUTE (__Interrupt58):ABSOLUTE (__DefaultInterrupt)
+                  0x00230b          0x2 SHORT 0x4
+                  0x00230c          0x2 SHORT 0x0 ((DEFINED (__Interrupt58)?ABSOLUTE (__Interrupt58):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00230d          0x2 SHORT 0x0
+                  0x00230e          0x2 SHORT 0x258a DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt)
+                  0x00230f          0x2 SHORT 0x4
+                  0x002310          0x2 SHORT 0x0 ((DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002311          0x2 SHORT 0x0
+                  0x002312          0x2 SHORT 0x258a DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt)
+                  0x002313          0x2 SHORT 0x4
+                  0x002314          0x2 SHORT 0x0 ((DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002315          0x2 SHORT 0x0
+                  0x002316          0x2 SHORT 0x258a DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt)
+                  0x002317          0x2 SHORT 0x4
+                  0x002318          0x2 SHORT 0x0 ((DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002319          0x2 SHORT 0x0
+                  0x00231a          0x2 SHORT 0x258a DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00231b          0x2 SHORT 0x4
+                  0x00231c          0x2 SHORT 0x0 ((DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00231d          0x2 SHORT 0x0
+                  0x00231e          0x2 SHORT 0x258a DEFINED (__Interrupt63)?ABSOLUTE (__Interrupt63):ABSOLUTE (__DefaultInterrupt)
+                  0x00231f          0x2 SHORT 0x4
+                  0x002320          0x2 SHORT 0x0 ((DEFINED (__Interrupt63)?ABSOLUTE (__Interrupt63):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002321          0x2 SHORT 0x0
+                  0x002322          0x2 SHORT 0x258a DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt)
+                  0x002323          0x2 SHORT 0x4
+                  0x002324          0x2 SHORT 0x0 ((DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002325          0x2 SHORT 0x0
+                  0x002326          0x2 SHORT 0x258a DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x002327          0x2 SHORT 0x4
+                  0x002328          0x2 SHORT 0x0 ((DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002329          0x2 SHORT 0x0
+                  0x00232a          0x2 SHORT 0x258a DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00232b          0x2 SHORT 0x4
+                  0x00232c          0x2 SHORT 0x0 ((DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00232d          0x2 SHORT 0x0
+                  0x00232e          0x2 SHORT 0x258a DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00232f          0x2 SHORT 0x4
+                  0x002330          0x2 SHORT 0x0 ((DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002331          0x2 SHORT 0x0
+                  0x002332          0x2 SHORT 0x258a DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt)
+                  0x002333          0x2 SHORT 0x4
+                  0x002334          0x2 SHORT 0x0 ((DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002335          0x2 SHORT 0x0
+                  0x002336          0x2 SHORT 0x258a DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt)
+                  0x002337          0x2 SHORT 0x4
+                  0x002338          0x2 SHORT 0x0 ((DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002339          0x2 SHORT 0x0
+                  0x00233a          0x2 SHORT 0x258a DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
+                  0x00233b          0x2 SHORT 0x4
+                  0x00233c          0x2 SHORT 0x0 ((DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00233d          0x2 SHORT 0x0
+                  0x00233e          0x2 SHORT 0x258a DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
+                  0x00233f          0x2 SHORT 0x4
+                  0x002340          0x2 SHORT 0x0 ((DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002341          0x2 SHORT 0x0
+                  0x002342          0x2 SHORT 0x258a DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
+                  0x002343          0x2 SHORT 0x4
+                  0x002344          0x2 SHORT 0x0 ((DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002345          0x2 SHORT 0x0
+                  0x002346          0x2 SHORT 0x258a DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt)
+                  0x002347          0x2 SHORT 0x4
+                  0x002348          0x2 SHORT 0x0 ((DEFINED (__Interrupt73)?ABSOLUTE (__Interrupt73):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002349          0x2 SHORT 0x0
+                  0x00234a          0x2 SHORT 0x258a DEFINED (__Interrupt74)?ABSOLUTE (__Interrupt74):ABSOLUTE (__DefaultInterrupt)
+                  0x00234b          0x2 SHORT 0x4
+                  0x00234c          0x2 SHORT 0x0 ((DEFINED (__Interrupt74)?ABSOLUTE (__Interrupt74):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00234d          0x2 SHORT 0x0
+                  0x00234e          0x2 SHORT 0x258a DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt)
+                  0x00234f          0x2 SHORT 0x4
+                  0x002350          0x2 SHORT 0x0 ((DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002351          0x2 SHORT 0x0
+                  0x002352          0x2 SHORT 0x258a DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt)
+                  0x002353          0x2 SHORT 0x4
+                  0x002354          0x2 SHORT 0x0 ((DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002355          0x2 SHORT 0x0
+                  0x002356          0x2 SHORT 0x258a DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt)
+                  0x002357          0x2 SHORT 0x4
+                  0x002358          0x2 SHORT 0x0 ((DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002359          0x2 SHORT 0x0
+                  0x00235a          0x2 SHORT 0x258a DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt)
+                  0x00235b          0x2 SHORT 0x4
+                  0x00235c          0x2 SHORT 0x0 ((DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00235d          0x2 SHORT 0x0
+                  0x00235e          0x2 SHORT 0x258a DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt)
+                  0x00235f          0x2 SHORT 0x4
+                  0x002360          0x2 SHORT 0x0 ((DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002361          0x2 SHORT 0x0
+                  0x002362          0x2 SHORT 0x258a DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt)
+                  0x002363          0x2 SHORT 0x4
+                  0x002364          0x2 SHORT 0x0 ((DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002365          0x2 SHORT 0x0
+                  0x002366          0x2 SHORT 0x258a DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt)
+                  0x002367          0x2 SHORT 0x4
+                  0x002368          0x2 SHORT 0x0 ((DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002369          0x2 SHORT 0x0
+                  0x00236a          0x2 SHORT 0x258a DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt)
+                  0x00236b          0x2 SHORT 0x4
+                  0x00236c          0x2 SHORT 0x0 ((DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00236d          0x2 SHORT 0x0
+                  0x00236e          0x2 SHORT 0x258a DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt)
+                  0x00236f          0x2 SHORT 0x4
+                  0x002370          0x2 SHORT 0x0 ((DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002371          0x2 SHORT 0x0
+                  0x002372          0x2 SHORT 0x258a DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt)
+                  0x002373          0x2 SHORT 0x4
+                  0x002374          0x2 SHORT 0x0 ((DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002375          0x2 SHORT 0x0
+                  0x002376          0x2 SHORT 0x258a DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt)
+                  0x002377          0x2 SHORT 0x4
+                  0x002378          0x2 SHORT 0x0 ((DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002379          0x2 SHORT 0x0
+                  0x00237a          0x2 SHORT 0x258a DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt)
+                  0x00237b          0x2 SHORT 0x4
+                  0x00237c          0x2 SHORT 0x0 ((DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00237d          0x2 SHORT 0x0
+                  0x00237e          0x2 SHORT 0x258a DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt)
+                  0x00237f          0x2 SHORT 0x4
+                  0x002380          0x2 SHORT 0x0 ((DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002381          0x2 SHORT 0x0
+                  0x002382          0x2 SHORT 0x258a DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt)
+                  0x002383          0x2 SHORT 0x4
+                  0x002384          0x2 SHORT 0x0 ((DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002385          0x2 SHORT 0x0
+                  0x002386          0x2 SHORT 0x258a DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt)
+                  0x002387          0x2 SHORT 0x4
+                  0x002388          0x2 SHORT 0x0 ((DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002389          0x2 SHORT 0x0
+                  0x00238a          0x2 SHORT 0x258a DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt)
+                  0x00238b          0x2 SHORT 0x4
+                  0x00238c          0x2 SHORT 0x0 ((DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00238d          0x2 SHORT 0x0
+                  0x00238e          0x2 SHORT 0x258a DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt)
+                  0x00238f          0x2 SHORT 0x4
+                  0x002390          0x2 SHORT 0x0 ((DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002391          0x2 SHORT 0x0
+                  0x002392          0x2 SHORT 0x258a DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt)
+                  0x002393          0x2 SHORT 0x4
+                  0x002394          0x2 SHORT 0x0 ((DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002395          0x2 SHORT 0x0
+                  0x002396          0x2 SHORT 0x258a DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt)
+                  0x002397          0x2 SHORT 0x4
+                  0x002398          0x2 SHORT 0x0 ((DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x002399          0x2 SHORT 0x0
+                  0x00239a          0x2 SHORT 0x258a DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt)
+                  0x00239b          0x2 SHORT 0x4
+                  0x00239c          0x2 SHORT 0x0 ((DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x00239d          0x2 SHORT 0x0
+                  0x00239e          0x2 SHORT 0x258a DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt)
+                  0x00239f          0x2 SHORT 0x4
+                  0x0023a0          0x2 SHORT 0x0 ((DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023a1          0x2 SHORT 0x0
+                  0x0023a2          0x2 SHORT 0x258a DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt)
+                  0x0023a3          0x2 SHORT 0x4
+                  0x0023a4          0x2 SHORT 0x0 ((DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023a5          0x2 SHORT 0x0
+                  0x0023a6          0x2 SHORT 0x258a DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt)
+                  0x0023a7          0x2 SHORT 0x4
+                  0x0023a8          0x2 SHORT 0x0 ((DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023a9          0x2 SHORT 0x0
+                  0x0023aa          0x2 SHORT 0x258a DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt)
+                  0x0023ab          0x2 SHORT 0x4
+                  0x0023ac          0x2 SHORT 0x0 ((DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023ad          0x2 SHORT 0x0
+                  0x0023ae          0x2 SHORT 0x258a DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt)
+                  0x0023af          0x2 SHORT 0x4
+                  0x0023b0          0x2 SHORT 0x0 ((DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023b1          0x2 SHORT 0x0
+                  0x0023b2          0x2 SHORT 0x258a DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt)
+                  0x0023b3          0x2 SHORT 0x4
+                  0x0023b4          0x2 SHORT 0x0 ((DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023b5          0x2 SHORT 0x0
+                  0x0023b6          0x2 SHORT 0x258a DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt)
+                  0x0023b7          0x2 SHORT 0x4
+                  0x0023b8          0x2 SHORT 0x0 ((DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023b9          0x2 SHORT 0x0
+                  0x0023ba          0x2 SHORT 0x258a DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt)
+                  0x0023bb          0x2 SHORT 0x4
+                  0x0023bc          0x2 SHORT 0x0 ((DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023bd          0x2 SHORT 0x0
+                  0x0023be          0x2 SHORT 0x258a DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt)
+                  0x0023bf          0x2 SHORT 0x4
+                  0x0023c0          0x2 SHORT 0x0 ((DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023c1          0x2 SHORT 0x0
+                  0x0023c2          0x2 SHORT 0x258a DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt)
+                  0x0023c3          0x2 SHORT 0x4
+                  0x0023c4          0x2 SHORT 0x0 ((DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023c5          0x2 SHORT 0x0
+                  0x0023c6          0x2 SHORT 0x258a DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt)
+                  0x0023c7          0x2 SHORT 0x4
+                  0x0023c8          0x2 SHORT 0x0 ((DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023c9          0x2 SHORT 0x0
+                  0x0023ca          0x2 SHORT 0x258a DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt)
+                  0x0023cb          0x2 SHORT 0x4
+                  0x0023cc          0x2 SHORT 0x0 ((DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023cd          0x2 SHORT 0x0
+                  0x0023ce          0x2 SHORT 0x258a DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
+                  0x0023cf          0x2 SHORT 0x4
+                  0x0023d0          0x2 SHORT 0x0 ((DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023d1          0x2 SHORT 0x0
+                  0x0023d2          0x2 SHORT 0x258a DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
+                  0x0023d3          0x2 SHORT 0x4
+                  0x0023d4          0x2 SHORT 0x0 ((DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023d5          0x2 SHORT 0x0
+                  0x0023d6          0x2 SHORT 0x258a DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
+                  0x0023d7          0x2 SHORT 0x4
+                  0x0023d8          0x2 SHORT 0x0 ((DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023d9          0x2 SHORT 0x0
+                  0x0023da          0x2 SHORT 0x258a DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt)
+                  0x0023db          0x2 SHORT 0x4
+                  0x0023dc          0x2 SHORT 0x0 ((DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023dd          0x2 SHORT 0x0
+                  0x0023de          0x2 SHORT 0x258a DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt)
+                  0x0023df          0x2 SHORT 0x4
+                  0x0023e0          0x2 SHORT 0x0 ((DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023e1          0x2 SHORT 0x0
+                  0x0023e2          0x2 SHORT 0x258a DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt)
+                  0x0023e3          0x2 SHORT 0x4
+                  0x0023e4          0x2 SHORT 0x0 ((DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023e5          0x2 SHORT 0x0
+                  0x0023e6          0x2 SHORT 0x258a DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt)
+                  0x0023e7          0x2 SHORT 0x4
+                  0x0023e8          0x2 SHORT 0x0 ((DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023e9          0x2 SHORT 0x0
+                  0x0023ea          0x2 SHORT 0x258a DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt)
+                  0x0023eb          0x2 SHORT 0x4
+                  0x0023ec          0x2 SHORT 0x0 ((DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023ed          0x2 SHORT 0x0
+                  0x0023ee          0x2 SHORT 0x258a DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt)
+                  0x0023ef          0x2 SHORT 0x4
+                  0x0023f0          0x2 SHORT 0x0 ((DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023f1          0x2 SHORT 0x0
+                  0x0023f2          0x2 SHORT 0x258a DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt)
+                  0x0023f3          0x2 SHORT 0x4
+                  0x0023f4          0x2 SHORT 0x0 ((DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023f5          0x2 SHORT 0x0
+                  0x0023f6          0x2 SHORT 0x258a DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt)
+                  0x0023f7          0x2 SHORT 0x4
+                  0x0023f8          0x2 SHORT 0x0 ((DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
+                  0x0023f9          0x2 SHORT 0x0
 
-.text             0x000e04        0x18c
+.text             0x002404        0x18c
  *(.init)
- .init            0x000e04         0x4c /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
-                  0x000e04                  __reset
-                  0x000e04                  __resetPRI
-                  0x000e40                  __psv_init
- .init            0x000e50         0xb8 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
-                  0x000e56                  __data_init_da
-                  0x000e56                  __data_init
+ .init            0x002404         0x4c /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
+                  0x002404                  __reset
+                  0x002404                  __resetPRI
+                  0x002440                  __psv_init
+ .init            0x002450         0xb8 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
+                  0x002456                  __data_init_da
+                  0x002456                  __data_init
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x000f08         0x82 build/default/production/mcc_generated_files/traps.o
-                  0x000f08                  __OscillatorFail
-                  0x000f28                  __StackError
-                  0x000f4a                  __AddressError
-                  0x000f6a                  __MathError
- .isr             0x000f8a          0x4 default_isr
-                  0x000f8a                  __DefaultInterrupt
+ .isr.text        0x002508         0x82 build/default/production/mcc_generated_files/traps.o
+                  0x002508                  __OscillatorFail
+                  0x002528                  __StackError
+                  0x00254a                  __AddressError
+                  0x00256a                  __MathError
+ .isr             0x00258a          0x4 default_isr
+                  0x00258a                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000f8e          0x2 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
-                  0x000f8e                  __crt_start_mode_normal
-                  0x000f8e                  __crt_start_mode
+                  0x00258e          0x2 /opt/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
+                  0x00258e                  __crt_start_mode_normal
+                  0x00258e                  __crt_start_mode
 
 usercode
  *(usercode)
@@ -886,7 +882,7 @@ __CONFIG1
  .debug_abbrev    0x000324          0x1 build/default/production/mcc_generated_files/mcc.o
  .debug_abbrev    0x000325         0xa6 build/default/production/main.o
 
-.debug_line       0x000000        0x5c4
+.debug_line       0x000000        0x5c5
  *(.debug_line)
  .debug_line      0x000000        0x114 build/default/production/mcc_generated_files/pin_manager.o
  .debug_line      0x000114        0x133 build/default/production/mcc_generated_files/traps.o
@@ -894,7 +890,7 @@ __CONFIG1
  .debug_line      0x00034c        0x110 build/default/production/mcc_generated_files/clock.o
  .debug_line      0x00045c         0x55 build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_line      0x0004b1         0x1a build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x0004cb         0xf9 build/default/production/main.o
+ .debug_line      0x0004cb         0xfa build/default/production/main.o
 
 .debug_frame      0x000000        0x226
  *(.debug_frame)
@@ -2406,21 +2402,21 @@ __c30_signature
  .config_IOL1WAY
                   0x00abf8          0x2 build/default/production/mcc_generated_files/system.o
 
-.text             0x000f90         0xf0
- .text            0x000f90         0x5c build/default/production/main.o
-                  0x000f90                  _main
- .text            0x000fec         0x52 build/default/production/mcc_generated_files/clock.o
-                  0x000fec                  _CLOCK_Initialize
- .text            0x00103e         0x2a build/default/production/mcc_generated_files/pin_manager.o
-                  0x00103e                  _PIN_MANAGER_Initialize
- .text            0x001068         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x001068                  _TRAPS_halt_on_error
+.text             0x002590         0xf0
+ .text            0x002590         0x5c build/default/production/main.o
+                  0x002590                  _main
+ .text            0x0025ec         0x52 build/default/production/mcc_generated_files/clock.o
+                  0x0025ec                  _CLOCK_Initialize
+ .text            0x00263e         0x2a build/default/production/mcc_generated_files/pin_manager.o
+                  0x00263e                  _PIN_MANAGER_Initialize
+ .text            0x002668         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x002668                  _TRAPS_halt_on_error
 
-.dinit            0x001080         0x10
- .dinit           0x001080         0x10 data_init
+.dinit            0x002680         0x10
+ .dinit           0x002680         0x10 data_init
 
-.text             0x001090         0x12
- .text            0x001090          0xc build/default/production/mcc_generated_files/system.o
-                  0x001090                  _SYSTEM_Initialize
- .text            0x00109c          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x00109c                  _INTERRUPT_Initialize
+.text             0x002690         0x12
+ .text            0x002690          0xc build/default/production/mcc_generated_files/system.o
+                  0x002690                  _SYSTEM_Initialize
+ .text            0x00269c          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00269c                  _INTERRUPT_Initialize
